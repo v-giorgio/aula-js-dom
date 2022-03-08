@@ -156,6 +156,13 @@ td {
   font-size: 18px;
 }
 
+#list-input-title,
+#list-input-desc {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .invisible {
   display: none;
 }

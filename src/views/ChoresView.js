@@ -1,4 +1,4 @@
-const showList = async (content) => {
+const showList = (content) => {
   return `
         <tr class="new-tr-${content.id}">
             <td>${content.title}</td>
