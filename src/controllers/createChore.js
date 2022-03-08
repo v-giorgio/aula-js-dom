@@ -8,13 +8,16 @@ const inputTitle = document.querySelector("#list-input-title");
 const inputDesc = document.querySelector("#list-input-desc");
 const errSpan = document.querySelector(".error");
 
+/* atualizar a tabela com as Chores recebidas pela API */
 getChore(table);
 
+/* disparar evento para criar nova Chore */
 createBtn.addEventListener("click", async (event) => {
   event.preventDefault();
   const title = inputTitle.value;
   const desc = inputDesc.value;
 
+  /* verificar se os campos estão preenchidos */
   if (title === "" || desc === "") {
     errSpan.classList.remove("invisible");
   } else {

@@ -1,3 +1,4 @@
+/* requisição assíncrona para criar uma nova Chore */
 const postChores = async (title, description) => {
   const response = await fetch("http://localhost:3000/chores", {
     method: "POST",

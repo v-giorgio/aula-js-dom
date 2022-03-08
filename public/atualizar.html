@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/styles.css">
+
+    <title>Exemplos DOM</title>
+</head>
+
+<body class="form-body">
+
+    <header>
+        <h1>To-do List</h1>
+    </header>
+
+    <form>
+        <div>
+            <label for="title">Título: </label>
+            <input type="text" name="title" id="list-input-title">
+        </div>
+        <div>
+            <label for="desc">Descrição: </label>
+            <input type="text" name="desc" id="list-input-desc">
+        </div>
+        <button id="list-button">Editar tarefa</button>
+        <span class="error invisible">Preencha os campos</span>
+    </form>
+</body>
+
+<script type="module" src="../src/controllers/updateChore.js"></script>
+
+</html>

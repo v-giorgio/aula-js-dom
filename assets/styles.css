@@ -175,6 +175,11 @@ td {
   background-color: rgba(223, 13, 13, 0.589);
 }
 
+.update-btn {
+  margin-left: 5px;
+  background-color: orange;
+}
+
 button:hover {
   box-shadow: 0 0 0.2rem #000;
   cursor: pointer;
