@@ -8,8 +8,10 @@ const inputTitle = document.querySelector("#list-input-title");
 const inputDesc = document.querySelector("#list-input-desc");
 const errSpan = document.querySelector(".error");
 
-/* atualizar a tabela com as Chores recebidas pela API */
-getChore(table);
+/* (IIFE) - atualizar a tabela com as Chores recebidas pela API */
+(async () => {
+  await getChore(table);
+})();
 
 /* disparar evento para criar nova Chore */
 createBtn.addEventListener("click", async (event) => {
@@ -25,5 +27,3 @@ createBtn.addEventListener("click", async (event) => {
     await postChores(title, desc);
   }
 });
-
-// json-server --watch db.json
