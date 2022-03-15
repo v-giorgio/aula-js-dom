@@ -27,7 +27,13 @@
 git clone https://github.com/v-giorgio/aula-js-dom.git
 ```
 
-#### ➡️ Abra a pasta no terminal (pode ser pelo VSCode) e execute o comando para instalar as dependências
+#### ➡️ Entre na pasta do projeto
+
+```
+cd aula-js-dom
+```
+
+#### ➡️ Abra o terminal (pode ser pelo VSCode) e execute o comando para instalar as dependências
 
 ```
 npm install
@@ -41,4 +47,14 @@ json-server --watch db.json
 
 #### ➡️ Abra o arquivo `index.html` para iniciar a aplicação
 
+<br>
+
+#### ➡️ Para parar de servir a API, basta executar o comando `CTRL + C` no terminal
+
 <hr>
+
+<div align="center">
+MIT License<br>
+Copyright © 2022<br> 
+  ✨ Created by <b>Vitor Giorgio</b> ✨
+</div>
