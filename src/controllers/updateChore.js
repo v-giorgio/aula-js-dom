@@ -1,3 +1,5 @@
+import getChoreById from "./getChoreById.js";
+
 const updateBtn = document.querySelector("#list-button");
 const inputTitle = document.querySelector("#list-input-title");
 const inputDesc = document.querySelector("#list-input-desc");
@@ -7,20 +9,14 @@ const errSpan = document.querySelector(".error");
 const url = new URL(window.location);
 const id = url.searchParams.get("id");
 
-/* requisição assíncrona para receber os atts da Chore */
-const getChoreById = async () => {
-  const response = await fetch(`http://localhost:3000/chores/${id}`, {
-    method: "GET",
-  });
-  const content = await response.json();
-  return content;
-};
-
 /* preencher os inputs com os atts da Chore */
-getChoreById().then((data) => {
-  inputTitle.value = data.title;
-  inputDesc.value = data.description;
-});
+try {
+  const { title, description } = await getChoreById(id);
+  inputTitle.value = title;
+  inputDesc.value = description;
+} catch (error) {
+  console.log(error);
+}
 
 /* atualizar Chore - disparar evento */
 updateBtn.addEventListener("click", async (event) => {
@@ -40,16 +36,23 @@ updateBtn.addEventListener("click", async (event) => {
 
 /* requisição assíncrona para atualizar a Chore */
 const updateChore = async (title, description) => {
-  const response = await fetch(`http://localhost:3000/chores/${id}`, {
-    method: "PUT",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ title: `${title}`, description: `${description}` }),
-  });
+  try {
+    const response = await fetch(`http://localhost:3000/chores/${id}`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: `${title}`,
+        description: `${description}`,
+      }),
+    });
 
-  const content = await response.json();
+    const content = await response.json();
 
-  return content;
+    return content;
+  } catch (error) {
+    console.log(error);
+  }
 };
