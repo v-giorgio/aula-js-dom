@@ -33,6 +33,12 @@ git clone https://github.com/v-giorgio/aula-js-dom.git
 cd aula-js-dom
 ```
 
+#### ➡️ (Opcional) Se preferir a abordagem funcional, continue na branch `main`. Caso prefira a abordagem POO (orientada a objetos), altere sua branch usando o comando
+
+```
+git checkout poo
+```
+
 #### ➡️ Abra o terminal (pode ser pelo VSCode) e execute o comando para instalar as dependências
 
 ```
