@@ -1,5 +1,5 @@
-import showList from "../views/ChoresView.js";
 import CreateButtons from "../utils/createButtons.js";
+import ChoresView from "../views/ChoresView.js";
 
 class ChoresController {
   /* requisição assíncrona para receber todas as Chores */
@@ -13,7 +13,7 @@ class ChoresController {
       /* percorrer as Chores recebidas */
       content.map(async (data) => {
         /* adicionar as chores na tabela */
-        table.insertAdjacentHTML("beforeend", showList(data));
+        table.insertAdjacentHTML("beforeend", ChoresView.showList(data));
         /* criar os três botões de alteração de cada Chore */
         CreateButtons.createConcBtn(await data.id);
         CreateButtons.createUpdateBtn(await data.id);
