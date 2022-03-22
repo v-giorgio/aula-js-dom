@@ -51,6 +51,12 @@ npm install
 json-server --watch db.json
 ```
 
+- Se esse comando não rodar, tente:
+
+```
+npx json-server --watch db.json
+```
+
 #### ➡️ Abra o arquivo `index.html` para iniciar a aplicação
 
 <br>
